@@ -10,3 +10,17 @@ const myFunction = function(){
 }
 
 console.log(typeof myFunction)
+
+///////////////////////////////////////////////////
+
+
+// Stack(Primitive types uses) and Heap memory(non primitive type uses them)
+
+let myYoutubename = "Thirumalai";
+
+let user = {
+    email: "user@gmail.com",
+    upi: 1
+}
+console.log("don");
+console.log(typeof user);
