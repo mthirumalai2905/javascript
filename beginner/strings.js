@@ -1,6 +1,7 @@
 const name = "thiru";
 const repoCount = 69;
 
+
 //console.log(name + repoCount + " Value");
 
 console.log(`Hello my name is ${name.toUpperCase()} and my repo count is ${repoCount}`)
