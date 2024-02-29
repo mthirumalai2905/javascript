@@ -42,25 +42,29 @@ const coding = ['js', 'R', 'rust', 'c']
 // coding.forEach(printMe)
 
 
-coding.forEach((item, index, arr)=>{console.log(item, index, arr);})
+// coding.forEach((item, index, arr)=>{console.log(item, index, arr);})
 
 
-const myCoding = [
-    {
-        languageName: "javascript",
-        languageFileName: "js"
-    },
-    {
-        languageName: "python",
-        languageFileName: "py"
-    }, 
-    {
-        languageName: "Ruby",
-        languageFileName: "R"
-    }
+// const myCoding = [
+//     {
+//         languageName: "javascript",
+//         languageFileName: "js"
+//     },
+//     {
+//         languageName: "python",
+//         languageFileName: "py"
+//     }, 
+//     {
+//         languageName: "Ruby",
+//         languageFileName: "R"
+//     }
 
-]
+// ]
 
-myCoding.forEach((item) => {
-    console.log(item.languageName);
-})
+// const values = myCoding.forEach((item) => {
+//     console.log(item.languageName);
+// })
+
+// console.log(values);  
+
+
