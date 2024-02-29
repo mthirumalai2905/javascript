@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        body {
+            height: 3000px; /* Create a long page for scrolling */
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            gap: 20px;
+            align-items: center;
+        }
+
+        .shape {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.8s ease-in-out; /* Add transition for smooth animation */
+        }
+
+        .circle {
+            background-color: #03045E;
+            border-radius: 50%;
+        }
+
+        .triangle {
+            background-color: #0077B6;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .rectangle {
+            background-color: #CAF0F8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape rectangle"></div>
+    </div>
+
+    <script>
+        const shapes = document.querySelectorAll('.shape');
+
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+
+            shapes.forEach((shape, index) => {
+                let offsetX = 0;
+                let offsetY = 0;
+
+                if (shape.classList.contains('circle')) {
+                    offsetX = scrollPosition;  // Move circles to the right
+                } else if (shape.classList.contains('triangle')) {
+                    offsetY = -scrollPosition; // Move triangles up
+                } else if (shape.classList.contains('rectangle')) {
+                    offsetY = scrollPosition;  // Move rectangles down
+                }
+
+                shape.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
