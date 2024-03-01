@@ -1,0 +1,14 @@
+                    WINDOW
+                    ------
+                    DOCUMENT
+                    --------
+                    HTML
+                    --------
+            -------        -------
+            HEAD           BODY
+            ---   ----      -----------------------------
+            TITLE  META                       DIV -- ATTRIBUTE
+            ----   ------                  ---   ----
+    TEXTNODE        ATTRIBUTE               H1     P
+                                        ---  ----  ---  --
+                                ATTRIBUTE  TEXTNODE TEXTNODE
