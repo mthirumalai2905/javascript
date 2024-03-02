@@ -41,3 +41,9 @@ html, body {
     margin-bottom: 10px;
     list-style-type: none;
 }
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
