@@ -2,7 +2,6 @@
 ## In JavaScript, falsy values are those that evaluate to false when converted to a boolean context. Here's a list of falsy values in JavaScript:
 
 ```false```: The boolean value false itself.
-<<<<<<< HEAD
 <br />
 ```0```: The number 0.
 <br />
@@ -12,7 +11,6 @@
 <br />
 ```undefined```: The undefined value.
 <br />
-=======
 
 ```0```: The number 0.
 
