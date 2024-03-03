@@ -2,10 +2,15 @@
 ## In JavaScript, falsy values are those that evaluate to false when converted to a boolean context. Here's a list of falsy values in JavaScript:
 
 ```false```: The boolean value false itself.
+
 ```0```: The number 0.
+
 ```''```: An empty string.
+
 ```null```: The null value.
+
 ```undefined```: The undefined value.
+
 ```NaN```: Not-a-Number.
 
 ## In JavaScript, truthy values are those that evaluate to true when converted to a boolean context. Here's a list of some common truthy values:
