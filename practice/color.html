@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="color">
+        <input type="color" />
+    </div>
+
+    <script>
+        let colorInput = document.querySelector('input[type="color"]');
+       // <!-- let colorDiv = document.getElementById('color') -->
+
+       colorInput.addEventListener('change',
+       function(){
+        document.body.style.backgroundColor = colorInput.value;
+       })
+    </script>
+</body>
+</html>
