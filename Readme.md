@@ -2,15 +2,6 @@
 ## In JavaScript, falsy values are those that evaluate to false when converted to a boolean context. Here's a list of falsy values in JavaScript:
 
 ```false```: The boolean value false itself.
-<br />
-```0```: The number 0.
-<br />
-```''```: An empty string.
-<br />
-```null```: The null value.
-<br />
-```undefined```: The undefined value.
-<br />
 
 ```0```: The number 0.
 
@@ -36,9 +27,4 @@
 ```The new Date() object```, even if the date represents a zero timestamp.
 
 The ```new Object()``` object.
-<<<<<<< HEAD
 
-Any ```non-null value.```
-=======
-Any ```non-null value.```
->>>>>>> b75d91476a17279433395bc3260402ef98292528
