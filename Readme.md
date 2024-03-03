@@ -20,7 +20,6 @@
 
 ```undefined```: The undefined value.
 
->>>>>>> b75d91476a17279433395bc3260402ef98292528
 ```NaN```: Not-a-Number.
 <br />
 
