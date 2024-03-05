@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: aqua;
+    }
+    .container{
+        background-color: rgb(255, 255, 255);
+        height: 500px;
+        width: 350px;
+        border-radius: 7px;
+        overflow: auto; /* Add overflow to handle extra tasks */
+    }
+    .to-do{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .task{
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        background-color: aqua;
+        max-width: calc(90% - 30px); /* Adjust maximum width */
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 3px;
+        overflow: hidden; /* Add overflow handling */
+        text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+        white-space: nowrap; /* Prevent wrapping */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+    button{
+        background-color: rgb(83, 83, 251);
+        color: rgb(0, 0, 187);
+        border: 2px solid rgb(0, 0, 219);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .remove-button {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="to-do">
+            <form id="taskForm">
+                <input class="topic"/>
+                <button type="submit">add</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const taskContainer = document.querySelector('.to-do');
+
+            tasks.forEach(function(taskValue) {
+                addTaskElement(taskValue);
+            });
+
+            document.getElementById('taskForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                addTask();
+            });
+        });
+
+        function addTask() {
+            const taskElement = document.querySelector('.topic');
+            const taskValue = taskElement.value.trim();
+
+            if(taskValue !== ''){
+                addTaskElement(taskValue);
+                taskElement.value = ''; // Clear input after adding task
+                saveTasks();
+            }
+        }
+
+        function addTaskElement(taskValue) {
+            const taskContainer = document.querySelector('.to-do');
+            const taskWrapper = document.createElement('div');
+            taskWrapper.classList.add('task');
+
+            const taskText = document.createElement('span');
+            taskText.textContent = taskValue;
+            taskWrapper.appendChild(taskText);
+
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove-button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', function(){
+                taskWrapper.remove();
+                saveTasks();
+            });
+            taskWrapper.appendChild(removeButton);
+
+            taskContainer.appendChild(taskWrapper);
+        }
+
+        function saveTasks() {
+            const tasks = [];
+            const taskElements = document.querySelectorAll('.task span');
+            taskElements.forEach(function(taskElement) {
+                tasks.push(taskElement.textContent);
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    </script>
+</body>
+</html>
