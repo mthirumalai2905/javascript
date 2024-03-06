@@ -1,0 +1,27 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+#home,
+#about,
+#services,
+#contact{
+width: 100%;
+height: 1000px;
+}
+section:nth-child(1){
+  background-color: blue;
+}
+section:nth-child(2){
+  background-color: red;
+}
+section:nth-child(3){
+  background-color: green;
+}
+section:nth-child(4){
+  background-color: yellow;
+}
+section:nth-child(5){
+  background-color: pink;
+}

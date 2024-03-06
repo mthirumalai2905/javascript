@@ -13,7 +13,7 @@ const Home = () => {
           <Link id="two" to="/about">About</Link>
         </li>
         <li>
-          <Link  id="three"to="/service">Services</Link>
+          <Link  id="three" to="/service">Services</Link>
         </li>
         <li>
           <Link id="four" to="/contact">Contact</Link>
