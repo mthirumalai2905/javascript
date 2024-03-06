@@ -1,0 +1,12 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+}
+#one, #two, #three, #four{
+    text-decoration: none;
+}
