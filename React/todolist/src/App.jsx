@@ -32,14 +32,12 @@ const App = () => {
           <button onClick={addTask}>Add</button>
         </div>
         <div className='task-list'>
-          {/* Mapping over to display them */}
-          {tasks.map((task, index) => (
-            <div key={index} className='task'>
+          {tasks.map((task,index) => (
+            <div className='task' key={index}>
               {task}
-              {/* Button to remove task */}
-              <button onClick={() => removeTask(index)}>Remove</button>
+              <button onClick={()=>removeTask(index)}>Remove</button>
             </div>
-          ))}
+  ))}
         </div>
       </div>
     </div>
