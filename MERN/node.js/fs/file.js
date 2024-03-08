@@ -12,16 +12,36 @@ const fs = require('fs');
 // console.log(result);
 
 //Async.... Read
-fs.readFile('./contacts.txt', 'utf-8', (err, result) =>{
-    if(err){
-        console.log("Error", err);
-    } else {
-        console.log(result);
-    }
-})
+// fs.readFile('./contacts.txt', 'utf-8', (err, result) =>{
+//     if(err){
+//         console.log("Error", err);
+//     } else {
+//         console.log(result);
+//     }
+// })
+
+
+
+fs.appendFileSync("./text.txt", new Date().getHours().toLocaleString());
+
+
+// fs.unlinkSync('./contacts.txt')
+
+console.log(fs.statSync("./test.txt"));
+fs.mkdirSync('my-docs/a/b', {recursive: true})
 
 
 
 
 
-// Learn the concept of Explicit and implicit returns
+
+
+
+
+
+// Learn the concept of Explicit and implicit returns in simple terms
+//explicit fucntions uses return keywordwheareas implicit doesnt
+//Learn about the read and write stream too
+
+
+
