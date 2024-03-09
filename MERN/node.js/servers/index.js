@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const url = require("url");
 
 const server = http.createServer((req, res) => {
     // Log the request
@@ -9,10 +10,12 @@ const server = http.createServer((req, res) => {
         headers: req.headers
     };
     console.log(requestData);
+    const myUrl = url.parse(req.url);
+    console.log(myUrl);
 
     // Write the request details to a file
     fs.appendFile('requests.txt', JSON.stringify(requestData, null, 2) + '\n', (err) => {
-        switch(req.url){
+        switch(req.url){ // switch(myUrl.pathname)
             case "/":
                 res.end("HomePAge");
                 break;
