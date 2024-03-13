@@ -97,9 +97,24 @@ const defaultValue = 'Default Value';
 
 const selectedValue = userInput ?? defaultValue;
 console.log(selectedValue); // Output: '' (userInput is an empty string, so it's not null or undefined)
+```
 
+## Lexical Scoping
+Lexical scoping, in simple terms, means that when you define a function inside another function,
+the inner function has access to the variables and parameters of the outer function,
+even after the outer function has finished running.
 
+```javascript
+function outerFunction() {
+    var outerVariable = 'I am outer!';
 
+    function innerFunction() {
+        console.log(outerVariable);
+    }
 
+    innerFunction(); // Call the inner function
+}
+
+outerFunction(); // Call the outer function
 
 ```
