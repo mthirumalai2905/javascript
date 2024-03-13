@@ -30,5 +30,6 @@ The ```new Object()``` object.
 
 ## Implicit and Explicit Function
 ```Implicit```: doesnt need ```return``` keyword
+
 ```Explicit```:  needs ```return``` keyword
 
