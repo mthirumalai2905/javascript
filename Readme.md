@@ -44,3 +44,62 @@ The ```new Object()``` object.
 // first bracket for funcction definition
 // seccond bracket for function declaration
 ```
+
+## Hoisting
+
+```javascript
+
+//Hoisting
+console.log(addone(5));
+function addone(num){
+    return num + 1;
+}
+
+//Error
+// console.log(addTwo(5))
+// const addTwo = function(num){
+// return num + 2;
+// }
+
+```
+
+
+## Nullish coalescence operator(" ?? ")
+
+```javascript
+const defaultValue = 'default';
+let someValue = null;
+
+const result = someValue ?? defaultValue;
+console.log(result); // Output: 'default'
+
+const data = {
+    user: {
+        name: 'John',
+        age: null
+    }
+};
+
+const userAge = data.user.age ?? 'Age not available';
+console.log(userAge); // Output: 'Age not available'
+
+function greet(name) {
+    const userName = name ?? 'Anonymous';
+    console.log(`Hello, ${userName}!`);
+}
+
+greet(); // Output: 'Hello, Anonymous!'
+greet('Alice'); // Output: 'Hello, Alice!'
+
+
+const userInput = '';
+const defaultValue = 'Default Value';
+
+const selectedValue = userInput ?? defaultValue;
+console.log(selectedValue); // Output: '' (userInput is an empty string, so it's not null or undefined)
+
+
+
+
+
+```
