@@ -33,3 +33,14 @@ The ```new Object()``` object.
 
 ```Explicit```:  needs ```return``` keyword
 
+## Immediately Invoked Function Expression
+
+```javascript
+(function chai(){
+    console.log(`DB Conneccted`);
+})()
+
+//()()
+// first bracket for funcction definition
+// seccond bracket for function declaration
+```
