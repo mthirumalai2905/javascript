@@ -1,0 +1,7 @@
+|-word vs keyword
+|-variables and constants
+|-let,var and const
+|-difference between var const and let
+|-hoisting
+|-types
+|-conditional
