@@ -5,6 +5,8 @@
 
 ```0```: The number 0.
 
+```[]```: Empty Array.
+
 ```''```: An empty string.
 
 ```null```: The null value.
