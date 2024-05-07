@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Closure aur vadapav</title>
+    <title>Closure and Vadapav</title>
 </head>
 <body>
-
     
 </body>
 
 <script>
-    function init(){
+    // First closure example
+    function init() {
         var name = "Mozilla";
-        function displayName(){
+        
+        function displayName() {
             console.log(name);
         }
+        
         displayName();
     }
     init();
 
-
-    function outer(){
+    // Second closure example
+    function outer() {
         let username = "thiru";
-        function inner(){
-            console.log("inner"+username);
+        
+        function inner() {
+            console.log("inner " + username);
         }
-        inner()
+        
+        inner();
     }
-    outer()
-    console.log("TOO OUTER",username);
+    outer();
+
+    // Attempt to access variable outside its scope
+    // This will result in an error because `username` is not defined outside `outer`
+    // console.log("TOO OUTER", username);
 </script>
 </html>
